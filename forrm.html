@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Entry Data Pegawai</title>
+  <style>
+    body {
+        font-family: sans-serif;
+      }
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .container {
+        width: 500px;
+        margin: 0 auto;
+       
+      }
+      
+      .form-group {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      .form-control {
+        width: 60%;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      
+      .btn {
+        width: 100px;
+        margin-bottom: 10px;
+      }
+      
+      .btn-primary {
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        width: 100px;
+        height: 40px;
+        border: none;
+      }
+      
+      .btn-secondary {
+        background-color: #ce0000;
+        color: white;
+        border-radius: 5px;
+        width: 100px;
+        height: 40px;
+        border: none;
+      }
+      
+  </style>
+</head>
+<body>
+    <div class="topnav">
+        <a href="#home">Data Karyawan</a>
+        <a href="#">Master data</a>
+        <a href="#">tambah data</a>
+       
+      </div>
+  <div class="container">
+    <h1>Form Entry Data Pegawai</h1>
+    <form action="/simpan-data" method="post">
+      <div class="form-group">
+        <label for="nik">NIK</label>
+        <input type="text" name="nik" id="nik" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="nama">Nama</label>
+        <input type="text" name="nama" id="nama" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="tempat-lahir">Tempat Lahir</label>
+        <input type="text" name="tempat-lahir" id="tempat-lahir" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="tanggal-lahir">Tanggal Lahir</label>
+        <input type="date" name="tanggal-lahir" id="tanggal-lahir" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="alamat">Alamat</label>
+        <textarea name="alamat" id="alamat" class="form-control" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="no-telepon">Nomor Telepon</label>
+        <input type="text" name="no-telepon" id="no-telepon" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="jabatan">Jabatan</label>
+        <select name="jabatan" id="jabatan" class="form-control" required>
+          <option value="">-- Pilih Jabatan --</option>
+          <option value="Manager">Manager</option>
+          <option value="Supervisor">Supervisor</option>
+          <option value="Staff">Staff</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select name="status" id="status" class="form-control" required>
+          <option value="">-- Pilih Status --</option>
+          <option value="Tetap">Tetap</option>
+          <option value="Kontrak">Kontrak</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Simpan</button>
+      <button type="reset" class="btn btn-secondary">Batal</button>
+    </form>
+  </div>
+</body>
+</html>
